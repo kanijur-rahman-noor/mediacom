@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Y-Fi Captive</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="convars.js"></script>
+<style>
+   .video-wrapper {
+      width: 300px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-wrapper video {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .unmute-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- <div hidden class="top-section">
+      <button class="back-button"></button>
+      <span class="time-badge"></span>
+      <button class="help-button">Help</button>
+    </div> -->
+
+    <div class="status-box">
+      <div class="time-slot">
+        <strong></strong>
+         <img class="logo" src="./assets/freeyfi.png" style="width: 30%;"></br>
+        <small style="font-size: small;">Get Free Y-Fi</small>
+      </div>
+      <img style="height: 50px;" src="./assets/timer.png" alt="food-icon" />
+      
+    </div>
+
+    <div class="ad-banner ">
+     <img src="./assets/520786272_1159864292831138_4498982784257838756_n.jpg">
+                            <!-- <ins data-freeyfi-slotid="72"
+                                 data-freeyfi-ct0="%%CLICK_URL_UNESC%%"
+                                 data-freeyfi-id="F7941D4446A4EC62B5E5472A97587">
+    
+                            </ins>
+                            <script async="" src="http://15.207.234.194/async.ip.js" type="text/javascript"></script>
+                         -->
+    </div>
+
+    <div class="order-details">
+<span style="color: #1a1b41; font-weight: bold;">
+    Connect With
+</span>
+<div id="social">
+    <a class="twitterBtn smGlobalBtn" href="#" ></a>
+    <a class="linkedinBtn smGlobalBtn" href="#" ></a>
+
+    <a class="googleplusBtn smGlobalBtn" href="#" ></a>
+    <a class="facebookBtn smGlobalBtn" href="#" ></a>
+
+    <a class="pinterestBtn smGlobalBtn" href="#" ></a>
+
+</div>
+
+      <form method="GET" action="$authaction" id="authForm" onsubmit="return validateInput(event)">
+  <input id="numb" name="numb" placeholder="Enter your Number or e-mail" />
+ <div id="error-message" style="color: red; display: none;     text-align: center;">Invalid phone number or email.</div>
+
+
+
+ <input type="hidden" name="tok" id="tok" value="$tok" />
+   <input type="hidden" name="redir" id="redir" value="$redir" />
+  <input type="submit" id="connect-button" class="btn" value="Get Free Y-Fi" />
+
+ 
+
+
+</form>
+
+    </div>
+    <div style="height: 130px;">
+
+    </div>
+  </div>
+
+<!-- Floating Ad -->
+<div class="floating-ad expanded" id="adBanner">
+  <div class="ad-inner">
+    <div class="ad-img">
+       <img src="./assets/Magic_320X50.png">
+<!-- 
+                            <ins data-freeyfi-slotid="73"
+                                 data-freeyfi-ct0="%%CLICK_URL_UNESC%%"
+                                 data-freeyfi-id="F7941D4446A4EC62B5E5472A97587">
+    
+                            </ins>
+                            <script async="" src="http://15.207.234.194/async.ip.js" type="text/javascript"></script>
+                         -->
+    </div>
+  </div>
+  <div class="ad-toggle">
+    <button id="expandBtn">▼</button>
+  </div>
+</div>
+
+<!-- Fixed footer below floating ad -->
+<div class="ad-footer-text">
+  <p>Powered by Free Y-Fi, a project of Adcelerete Limited</p>
+</div>
+
+
+
+<!-- Full Page Splash Screen -->
+
+
+<div id="splashScreen" class="splash-screen">
+  <!-- Timer -->
+  <div class="splash-timer">
+    <span id="splashCountdown">30</span>s
+  </div>
+
+  <!-- Large Ad Slot (300x600) -->
+  <div class="splash-large-ad">
+    <div class="ad-placeholder" style="background-color: black;">
+ <div class="video-wrapper">
+  <video id="promoVideo" autoplay loop muted playsinline>
+    <source src="https://ad.freeyfi.com/2025/chaka_all_in_one/vibe.mp4" type="video/mp4">
+  </video>
+  <button class="unmute-btn" onclick="toggleMute(event)">🔊</button>
+</div>
+
+
+                            <!-- <ins data-freeyfi-slotid="74"
+                                 data-freeyfi-ct0="%%CLICK_URL_UNESC%%"
+                                 data-freeyfi-id="F7941D4446A4EC62B5E5472A97587">
+    
+                            </ins>
+                            <script async="" src="http://15.207.234.194/async.ip.js" type="text/javascript"></script>
+                         -->
+    </div>
+
+  </div>
+
+  <!-- Small Ad Slot (320x50) -->
+  <div class="splash-small-ad">
+    <div class="ad-placeholder-small">
+       
+      <img src="./assets/Magic_320X50.png">
+      <!-- <ins data-freeyfi-slotid="75"
+                                 data-freeyfi-ct0="%%CLICK_URL_UNESC%%"
+                                 data-freeyfi-id="F7941D4446A4EC62B5E5472A97587">
+    
+                            </ins>
+                            <script async="" src="http://15.207.234.194/async.ip.js" type="text/javascript"></script>
+                         -->
+    </div>
+
+                          
+  </div>
+
+  <!-- Splash Content -->
+  <!-- <div class="splash-content">
+    <img src="./assets/freeyfi.png" alt="Loading..." />
+    <p>Please wait while we connect you...</p>
+  </div> -->
+</div>
+
+
+
+<!-- Initial 300x250 Popup -->
+<!-- Initial 300x250 Popup with Backdrop -->
+<!-- <div id="initialPopupBackdrop" class="popup-backdrop">
+  <div id="initialPopup" class="popup-box">
+    <button id="popupCloseBtn" class="close-btn">✖</button>
+    <img src="./assets/sddefault.jpg" alt="Ad" style="width: 100%; height: auto;" />
+  </div>
+</div> -->
+
+
+
+  <script src="script.js"></script>
+   <script src="./assets/submit.js"></script>
+<script src="./assets/fp.min.js"></script>
+<script>
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+    for (let cookie of cookies) {
+        const [key, value] = cookie.split('=');
+        if (key === name) return value;
+    }
+    return null;
+}
+
+(function () {
+    const existingVisitorId = getCookie('visitorId');
+
+    if (!existingVisitorId) {
+        console.log("No visitorId cookie found. Loading FingerprintJS...");
+
+        FingerprintJS.load()
+            .then(fp => fp.get())
+            .then(result => {
+                const newVisitorId = result.visitorId;
+                console.log("Generated new visitorId:", newVisitorId);
+
+                const cookieValue = `visitorId=${newVisitorId}; max-age=${60 * 60 * 24 * 30}; path=/`;
+                document.cookie = cookieValue;
+            })
+            .catch(error => {
+                console.error("Failed to load or generate FingerprintJS:", error);
+            });
+
+    } else {
+        console.log("Found existing visitorId cookie:", existingVisitorId);
+    }
+})();
+</script>
+<script>
+  function toggleMute(e) {
+    e.stopPropagation();
+    const video = document.getElementById('promoVideo');
+    video.muted = !video.muted;
+    e.target.textContent = video.muted ? '🔊' : '🔇';
+  }
+</script>
+</body>
+</html>
