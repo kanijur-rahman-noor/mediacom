@@ -419,7 +419,7 @@ background-color: #1a1b41;
 /* Consistent margin between timer and ad slots */
 .splash-large-ad,
 .splash-small-ad {
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .ad-placeholder {
